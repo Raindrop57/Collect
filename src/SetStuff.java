@@ -34,8 +34,22 @@ public class SetStuff {
 		System.out.print("\n");
 		
 		//Example of HashMap and TreeMap
-		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
-		TreeMap<Integer, Integer> treeMap = new TreeMap<Integer, Integer>();
+		HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
+		TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
+		
+		//Add some data, where putting in an integer key gives that key squared
+		for (int i = 1; i <= 5; ++i) {
+			hashMap.put(i, Integer.toString(i) + " is a number");
+			treeMap.put(i, Integer.toString(i) + " is a number");
+		}
+		
+		//Print hashMap and treeMap
+		System.out.println("The HashMap: " + hashMap);
+		System.out.println("The TreeMap: " + treeMap);
+		
+		//Although the printed results were the same, HashMap does not necessarily retain the order
+		//that the elements were put in, while TreeMap does. As a result, treeMap should be used
+		//to ensure the order of key, value pairs.
 
 	}
 
